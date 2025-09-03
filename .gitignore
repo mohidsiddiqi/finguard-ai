@@ -82,3 +82,8 @@ Thumbs.db
 .env.*
 !env.example
 secrets.json
+
+# ========================
+# Other
+# ========================
+FinGuard__AI_MVP_SDLC.docx
