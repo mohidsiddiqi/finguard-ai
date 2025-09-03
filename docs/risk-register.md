@@ -1,12 +1,11 @@
 # Risk Register — Phase 0 (FinGuard AI)
 
-This register captures known risks for the MVP, along with likelihood, impact, and planned mitigations.  
-It will be updated in each phase as new risks are identified.
-
-| ID  | Risk                               | Likelihood (1–3) | Impact (1–3) | Mitigation                                         | Owner |
-|-----|------------------------------------|------------------|--------------|----------------------------------------------------|-------|
-| R1  | CSV parsing edge cases (weird headers, encodings, missing fields) | 2 | 3 | Queue parsing in worker; add retry logic; provide a sample CSV template | Mohid |
-| R2  | Async job flakiness (failed/duplicate tasks in Celery/RQ) | 2 | 3 | Use idempotent tasks, retries, and Redis-backed queue | Mohid |
-| R3  | Security drift (forgetting baseline controls) | 2 | 3 | Maintain `docs/security-checklist.md`; review at end of each sprint | Mohid |
-| R4  | Scope creep (jumping to bank aggregators or advanced AI early) | 3 | 2 | Keep aggregators flagged for Phase 4; block extras in Phase 0–3 | Mohid |
-| R5  | Budget/category semantics unclear (thresholds, category rules) | 2 | 2 | Freeze entity fields in API contracts during Phase 1; validate with tests | Mohid |
+| ID  | Risk                                                        | Likelihood (1–3) | Impact (1–3) | Mitigation                                                                 | Owner |
+|-----|-------------------------------------------------------------|------------------|--------------|----------------------------------------------------------------------------|-------|
+| R1  | CSV parsing edge cases (headers, encodings, missing fields) | 2                | 3            | Worker + retries; sample template; clear error logs                        | Mohid |
+| R2  | OFX/QFX parsing issues or malformed files                   | 2                | 3            | Use maintained parser; strict validation; reject unsupported variants       | Mohid |
+| R3  | Async job flakiness (dup/failed tasks)                      | 2                | 3            | Idempotent tasks; retries with backoff; Redis-backed queue                 | Mohid |
+| R4  | Webhook forgery/replay                                     | 2                | 3            | Verify signatures (Plaid JWT / TL-Signature); enforce idempotency & clocks | Mohid |
+| R5  | Sandbox ≠ production (data shape/latency drift)             | 2                | 2            | Clearly mark demo-only; document assumptions; make connector pluggable     | Mohid |
+| R6  | Scope creep (live prod connectors, payments, multi-provider)| 3                | 2            | Keep prod connections OUT; one sandbox provider only; feature flags        | Mohid |
+| R7  | Budget/category semantics unclear                           | 2                | 2            | Freeze entity fields in Phase 1 contracts; add tests                       | Mohid |

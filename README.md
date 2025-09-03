@@ -8,7 +8,8 @@ It allows users to upload CSVs, view transactions and spending trends, set budge
 
 ## 🚀 MVP Features
 
-* Upload CSV → parse, store, list, and filter transactions
+* Import via **CSV/OFX/QFX** or **manual entry** → parse, store, list, and filter transactions
+* **Sandbox bank connection (demo-only)** with **webhook ingestion** into Transactions
 * Categorize expenses and view spending trends
 * Create budgets and track status vs actuals
 * AI-powered budgeting tips + overrun risk scoring
