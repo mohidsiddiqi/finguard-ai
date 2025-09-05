@@ -1,0 +1,6 @@
+merchant,amount,category,description,date,account
+Grocery Mart,-4500,Groceries,weekly groceries,2025-09-03,HBL Checking
+Salary,+80000,Income,August payroll,2025-09-02,HBL Checking
+Ride Hailer,-950,Transport,office commute,2025-09-01,HBL Checking
+Utility Co.,-6200,Utilities,Electricity bill,2025-08-29,HBL Checking
+Coffee Spot,-350,Food & Drink,,2025-08-28,HBL Checking

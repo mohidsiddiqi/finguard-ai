@@ -1,0 +1,52 @@
+!Type:Bank
+
+OFXHEADER:100
+DATA:OFXSGML
+VERSION:102
+SECURITY:NONE
+ENCODING:USASCII
+CHARSET:1252
+COMPRESSION:NONE
+OLDFILEUID:NONE
+NEWFILEUID:NONE
+
+<OFX>
+  <SIGNONMSGSRSV1>
+    <SONRS>
+      <STATUS><CODE>0<SEVERITY>INFO</STATUS>
+      <DTSERVER>20250903120000
+      <LANGUAGE>ENG
+    </SONRS>
+  </SIGNONMSGSRSV1>
+  <CREDITCARDMSGSRSV1>
+    <CCSTMTTRNRS>
+      <TRNUID>2001
+      <STATUS><CODE>0<SEVERITY>INFO</STATUS>
+      <CCSTMTRS>
+        <CURDEF>PKR
+        <CCACCTFROM>
+          <ACCTID>9876543210
+        </CCACCTFROM>
+        <BANKTRANLIST>
+          <DTSTART>20250801000000
+          <DTEND>20250903000000
+          <STMTTRN>
+            <TRNTYPE>DEBIT
+            <DTPOSTED>20250828
+            <TRNAMT>-350.00
+            <FITID>fit_cc_001
+            <NAME>Coffee Spot
+          </STMTTRN>
+          <STMTTRN>
+            <TRNTYPE>DEBIT
+            <DTPOSTED>20250829
+            <TRNAMT>-6200.00
+            <FITID>fit_cc_002
+            <NAME>Utility Co.
+            <MEMO>Electricity bill
+          </STMTTRN>
+        </BANKTRANLIST>
+      </CCSTMTRS>
+    </CCSTMTTRNRS>
+  </CREDITCARDMSGSRSV1>
+</OFX>
