@@ -1,4 +1,4 @@
-> See also: ../implementation-notes/ingestion.md
+> See also: [`/implementation-notes/ingestion.md`](../implementation-notes/ingestion.md)
 ---
 # OFX/QFX Mapping — v1.0 (MVP)
 
